@@ -1,8 +1,9 @@
 # AI Assistance Log
 
 As requested in the challenge instructions, this is a summary of how an AI coding assistant
-(Claude, Anthropic) was used while building this project. All code was reviewed, understood,
-and adjusted by me before submission.
+(Claude, Anthropic) was used while building this project. 
+
+**All code was reviewed and understood by me before submission.**
 
 ## Summary of prompts / assistance used
 
@@ -10,12 +11,11 @@ and adjusted by me before submission.
    Code, whether Talend API Tester was needed, and database options — Postgres, MongoDB,
    DynamoDB, H2 — with trade-offs for this specific query pattern of sensor/metric/date-range
    aggregation).
-2. Asked what needed to be installed locally to get started (JDK, IntelliJ, Docker Desktop,
+2. Asked if i needed a new JDK version and other possible progam updates locally to get started (JDK, IntelliJ, Docker Desktop,
    Git).
-3. Asked for the project to be scaffolded: a Spring Boot REST API with the two endpoints
-   described in the brief (ingest a reading, query with aggregation), Postgres via Docker
-   Compose plus an H2 profile for a no-Docker option, input validation, a global exception
-   handler, and unit + integration tests.
+3. Asked for assistance on docker error (engine not running error.)
+
+4. TRUNCATE TABLE readings; will this wipe out everything from my metrics table.
 
 ## What I own / reviewed
 
