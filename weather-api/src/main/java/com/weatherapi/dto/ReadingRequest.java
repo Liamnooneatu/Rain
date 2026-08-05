@@ -1,3 +1,22 @@
+/*
+ * represents the data received when a new weather sensor reading is submitted to the API.
+ *
+ * It contains:
+ * - metric: The type of measurement being recorded (e.g., temperature, humidity, or wind speed).
+ * - value: The numerical value of the sensor measurement.
+ * - timestamp: The time when the reading was recorded.
+ * - location: The physical location associated with the sensor reading.
+ * - gps: GPS coordinates of the sensor location.
+ *
+ * Validation annotations are used to ensure required fields contain valid
+ * data before the reading is processed:
+ * - metric cannot be empty or blank and value cannot be null.
+ *
+ * separates incoming API request data from the internal layer and
+ * allows Spring Boot to automatically map JSON request data into a Java object.
+ */
+
+
 package com.weatherapi.dto;
 
 import jakarta.validation.constraints.NotBlank;

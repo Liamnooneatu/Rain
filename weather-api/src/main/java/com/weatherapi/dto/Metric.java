@@ -1,7 +1,22 @@
+/*
+ * This enum defines the supported weather metrics that can be stored
+ * and queried by the application. Each metric is associated with its
+ * corresponding unit of measurement.
+ *
+ * Supported metrics:
+ * - TEMPERATURE (°C)
+ * - HUMIDITY (%)
+ * - WIND_SPEED (km/h)
+ *
+ * The fromString() method converts a user-provided string into the
+ * corresponding Metric enum value.
+ *
+ * If the supplied metric is blank or does not match one of the supported values,
+ *  an InvalidQueryException is thrown with a descriptive error.
+ */
+
 package com.weatherapi.dto;
-
 import com.weatherapi.exception.InvalidQueryException;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

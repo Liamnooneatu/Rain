@@ -1,3 +1,21 @@
+/*
+ * represents the result of a weather sensor query for an individual sensor.
+ *
+ * stores:
+ * - id: The unique identifier of the sensor.
+ * - location: The physical location associated with the sensor.
+ * - gps: The GPS coordinates of the sensor.
+ * - range: The date/time range that the query was performed over.
+ * - statistics: The statistical operation applied to the readings (e.g., average, minimum, or maximum).
+ * - metrics: A list of calculated metric values returned for the sensor.
+ *
+ * used to structure the API response by grouping sensor
+ * information and calculated weather statistics into a single object.
+ *
+ * all fields are final and values are assigned through the constructor.
+ */
+
+
 package com.weatherapi.dto;
 
 import java.util.List;

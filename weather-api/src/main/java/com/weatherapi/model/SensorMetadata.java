@@ -1,3 +1,23 @@
+/*
+ * represents the stored metadata information associated with a weather sensor.
+ *
+ * It contains:
+ * - sensorId: A unique identifier for the sensor and the primary key of
+ *   the database table.
+ * - location: The physical location where the sensor is installed.
+ * - gps: The GPS coordinates associated with the sensor location.
+ *
+ * The @Entity annotation maps this class to the "sensor_metadata" database
+ * table, allowing sensor details to be persisted and retrieved using JPA.
+ *
+ * The protected no-argument constructor is required by JPA when creating
+ * entity objects from database records.
+ *
+ * Setter methods are provided for location and GPS fields to allow sensor
+ * metadata to be updated after creation.
+ */
+
+
 package com.weatherapi.model;
 
 import jakarta.persistence.Entity;

@@ -1,3 +1,39 @@
+/*
+ * This service class contains the main business logic for processing and
+ * querying weather sensor readings.
+ *
+ * Responsibilities include:
+ *
+ * 1. Ingesting sensor readings:
+ *    - Validates incoming sensor data.
+ *    - Converts metric strings into valid Metric enum values.
+ *    - Creates or updates sensor metadata such as location and GPS data.
+ *    - Stores new weather readings in the database.
+ *
+ * 2. Querying sensor data:
+ *    - Validates requested metrics, statistics, and date ranges.
+ *    - Retrieves sensor readings based on filters such as sensor ID,
+ *      metric type, and time period.
+ *    - Calculates requested statistics such as minimum, maximum, sum,
+ *      or average.
+ *    - Builds structured response objects containing sensor details and
+ *      calculated metric results.
+ *
+ * 3. Data validation:
+ *    - Ensures sensor IDs and metrics are valid.
+ *    - Checks date ranges meet the required limits.
+ *    - Handles invalid or missing query parameters by throwing
+ *      InvalidQueryException.
+ *
+ * The service layer acts as the connection between the controller and
+ * repository layers, keeping business rules and data processing separate
+ * from API request handling and database operations.
+ *
+ * The class uses Spring's @Service annotation so it can be automatically
+ * managed and injected by the Spring Boot application context.
+ */
+
+
 package com.weatherapi.service;
 
 import com.weatherapi.dto.*;

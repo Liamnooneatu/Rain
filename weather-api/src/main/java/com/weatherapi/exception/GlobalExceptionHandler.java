@@ -1,3 +1,32 @@
+/*
+ * This class provides centralized exception handling for the weather API
+ * using Spring Boot's @RestControllerAdvice annotation.
+ *
+ * It captures exceptions thrown throughout the application and converts
+ * them into consistent HTTP error responses using the ErrorResponse DTO.
+ *
+ * Handled exceptions include:
+ * - MethodArgumentNotValidException:
+ *   Handles validation failures for invalid request data.
+ *
+ * - InvalidQueryException:
+ *   Handles invalid metric or statistic query parameters.
+ *
+ * - MissingServletRequestParameterException:
+ *   Handles missing required API request parameters.
+ *
+ * - MethodArgumentTypeMismatchException:
+ *   Handles incorrect parameter data types.
+ *
+ * - Exception:
+ *   Handles unexpected server-side errors.
+ *
+ * Each exception handler returns an appropriate HTTP status code and a
+ * descriptive error message, improving API usability and making errors
+ * easier for clients to understand and debug.
+ */
+
+
 package com.weatherapi.exception;
 
 import org.springframework.http.HttpStatus;

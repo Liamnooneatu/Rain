@@ -1,3 +1,18 @@
+/*
+ * This enum defines the statistical operations that can be applied when
+ * processing weather sensor readings.
+ *
+ * Supported statistics: MIN,MAX,SUM,AVG
+ *
+ * The fromString() method converts a user-provided string into the
+ * corresponding StatisticType enum value. It validates the input and
+ * throws an InvalidQueryException if the statistic is missing or invalid.
+ *
+ * The apply() method performs the selected statistical calculation on a
+ * list of sensor reading values using Java Streams.
+ */
+
+
 package com.weatherapi.dto;
 
 import com.weatherapi.exception.InvalidQueryException;

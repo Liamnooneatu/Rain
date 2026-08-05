@@ -1,3 +1,29 @@
+/*
+ * This repository interface provides database access operations for the
+ * Reading entity.
+ *
+ * It extends JpaRepository, which provides built-in CRUD functionality such
+ * as saving, updating, deleting, and retrieving weather readings.
+ *
+ * Custom query methods include:
+ *
+ * - findBySensorIdAndMetricAndTimestampBetween():
+ *   Retrieves readings for a specific sensor and metric within a given
+ *   date/time range.
+ *
+ * - findFirstBySensorIdAndMetricOrderByTimestampDesc():
+ *   Retrieves the most recent reading for a specific sensor and metric.
+ *
+ * - findDistinctSensorIds():
+ *   Returns a list of unique sensor IDs currently stored in the database.
+ *
+ * These methods allow the service layer to efficiently retrieve and
+ * process weather sensor data without directly writing database access
+ * logic.
+ */
+
+
+
 package com.weatherapi.repository;
 
 import com.weatherapi.model.Reading;
